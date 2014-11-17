@@ -34,13 +34,6 @@ resolvers ++= Seq(
   "Spray Nightlies"           at        "http://nightlies.spray.io"
 )
 
-Revolver.settings
-
-javaOptions in Revolver.reStart ++= Seq (
-  "-Xmx2g"
-  )
-
-
 parallelExecution in Test := false
 
 testOptions in Test += Tests.Argument(TestFrameworks.Specs2, "junitxml", "console")
